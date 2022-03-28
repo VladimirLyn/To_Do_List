@@ -68,21 +68,21 @@ namespace To_Do_List
 
                 Console.WriteLine("Введите название");
                 W.Name = Console.ReadLine();
-                while(string.IsNullOrWhiteSpace(W.Name))
+                while (string.IsNullOrWhiteSpace(W.Name))
                 {
                     Console.WriteLine("Введите название ещё раз ");
                     W.Name = Console.ReadLine();
                 }
 
                 Console.WriteLine("Введите дату в формате дд.мм.гггг ");
-                try 
+                try
                 {
-                    W.Time = DateTime.Parse(Console.ReadLine()); 
+                    W.Time = DateTime.Parse(Console.ReadLine());
                 }
-                catch 
-                { 
+                catch
+                {
                     Console.WriteLine("Введите дату в формате дд.мм.гггг ещё раз ");
-                    W.Time = DateTime.Parse(Console.ReadLine()); 
+                    W.Time = DateTime.Parse(Console.ReadLine());
                 }
 
                 Console.WriteLine("Введите описание ");
