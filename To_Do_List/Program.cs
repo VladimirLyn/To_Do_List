@@ -68,17 +68,33 @@ namespace To_Do_List
 
                 Console.WriteLine("Введите название");
                 W.Name = Console.ReadLine();
+                while(string.IsNullOrWhiteSpace(W.Name))
+                {
+                    Console.WriteLine("Введите название ещё раз ");
+                    W.Name = Console.ReadLine();
+                }
 
                 Console.WriteLine("Введите дату в формате дд.мм.гггг ");
-                W.Time = DateTime.Parse(Console.ReadLine());
+                try 
+                {
+                    W.Time = DateTime.Parse(Console.ReadLine()); 
+                }
+                catch 
+                { 
+                    Console.WriteLine("Введите дату в формате дд.мм.гггг ещё раз ");
+                    W.Time = DateTime.Parse(Console.ReadLine()); 
+                }
 
                 Console.WriteLine("Введите описание ");
                 W.Description = Console.ReadLine();
+                while (string.IsNullOrWhiteSpace(W.Description))
+                {
+                    Console.WriteLine("Введите описание ещё раз ");
+                    W.Description = Console.ReadLine();
+                }
 
                 L.Add(W);
-
                 L[a] = (W);
-
                 a++;
                 W.Number = W.Number + a;
                 foreach (Work w in L)
