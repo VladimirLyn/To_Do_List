@@ -108,17 +108,6 @@ namespace To_Do_List
                 Start();
             }
 
-            /*
-            int a = 0;
-            int w;
-            Random r = new Random();
-            w = r.Next(0, 1000);
-            L.Add(a);
-            L[a] = (w);
-            Console.WriteLine(L[a].ToString());
-            a++;
-            */
-
         }
     }
 }
